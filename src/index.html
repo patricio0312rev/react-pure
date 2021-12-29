@@ -18,8 +18,9 @@
             ]);
         }
 
-        const App = () => {
-            return React.createElement("div", {className: "card-list"},
+        class App extends React.Component {
+            render() {
+                return React.createElement("div", {className: "card-list"},
                 [
                     React.createElement("h1", {}, "React is rendered!!!"),
                     React.createElement(Person, { name: 'Patricio', ocupation: 'Fullstack Developer'}),
@@ -27,6 +28,7 @@
                     React.createElement(Person, { name: 'Patricio', ocupation: 'Fullstack Developer'}),
                 ]
             );
+            }
         }
 
         ReactDOM.render(React.createElement(App), document.getElementById("root"));
